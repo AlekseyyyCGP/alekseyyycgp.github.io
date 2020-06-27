@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <p>Hello, and welcome to my <a href="https://blog.coursera.org/announcing-guided-projects/">Coursera Guided Projects</a> portfolio website! Here, I'll show off my projects that I created when taking these classes.</p>
+
+  <ul>
+    <li>All guided projects: <a href="{{site.baseurl}}/projects">{{site.baseurl}}/projects</a></li>
+    <li>My other website: <a href="https://alekseyyy.github.io/">https://alekseyyy.github.io</a></li>
+    <li>My Keybase/PGP Key: <a href="https://keybase.io/epsiloncalculus">https://keybase.io/epsiloncalculus</a></li>
+  </ul>
+
+  <br>
+
+  <h1 class="page-heading">Latest Projects</h1>
+
+  <p>These are the four latest guided projects I finished. You can see all my projects <a href="{{site.baseurl}}/projects/">here</a>.
+
+  <ul class="post-list">
+    {% for post in site.posts limit:4 %}
+      <li>
+        <span class="post-meta">Certificate earned in {{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+
+</div>
